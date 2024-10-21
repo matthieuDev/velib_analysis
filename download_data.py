@@ -1,7 +1,7 @@
 import requests, os, json
 from datetime import datetime
 
-def get_current_station_status(data_folder = 'data/') : 
+def get_current_station_status(data_folder = os.path.dirname(__file__) +'/data/') : 
     if not os.path.exists(data_folder) :
         os.mkdir(data_folder)
         
