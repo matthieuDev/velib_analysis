@@ -15,7 +15,7 @@ def get_current_station_status(data_folder = 'data/') :
         }
         err = req.raise_for_status()
         if err:
-            to_write['error'] = string(err)
+            to_write['error'] = str(err)
         with open(save_filename, 'w') as f:
             json.dump(to_write, f)
         return
